@@ -10,15 +10,18 @@
 
 Addressing Business Requirement 1: Differentiating healthy cherry leaves from powdery mildew.
 Components:
+
     - Show average and variability images for each class (healthy and powdery mildew).
     - Display the differences between average healthy and average powdery mildew cherry leaves.
     - Create an image montage for each class.
+
 Visual representations of the average images, differences, and image montages for better understanding.
 
 ## Page 3: Cherry Leaf Health Detection
 
 Addressing Business Requirement 2: Predicting if a cherry leaf is healthy or contains powdery mildew.
 Components:
+
     - Link to download a set of cherry leaf images for live prediction (from the provided dataset).
     - User Interface with a file uploader widget for uploading multiple cherry leaf images.
     - Display of uploaded images and prediction statements (healthy or powdery mildew) with associated probabilities.
