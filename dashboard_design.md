@@ -1,6 +1,6 @@
 # Dashboard Design for user interface
 
-## Page 1: Quick Project Summary
+## Page 1: Project Summary
 
     - Quick project summary providing background information about the project and its importance.
     - General information about the problem and the available dataset.
