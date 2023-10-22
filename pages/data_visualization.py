@@ -12,32 +12,38 @@ import random
 # Page title and text
 def show():
     st.title("Cherry Leaf Visualization")
-    st.info("The client is interested in differentiating powdery mildew and healthy cherry leaves.")
+    st.info('''
+        This page is to answer client's first business requirement
+        to carry analysis on:
+        
+        * average images and variability images for each class (healthy or powdery mildew),
+        * the differences between average healthy and average powdery mildew cherry leaves,
+        * an image montage for each class. ''')
 
     version = 'v1-mildew'
     
     selected_option = st.radio("Select an option:", [
         "Difference between average and variability image",
         "Differences between average infected and average healthy leaves",
-        "Image Montage"
+        "Image Montage by Class"
     ])
 
-    if st.checkbox("Difference between average and variability image"):
+    if selected_option == "Difference between average and variability image":
         show_average_images(version)
 
-    if st.checkbox("Differences between average infected and average healthy leaves"):
+    if selected_option == "Differences between average infected and average healthy leaves":
         show_difference_between_average_images(version)
 
-    if st.checkbox("Image Montage"):
-        create_image_montage()
+    if selected_option == "Image Montage by Class":
+        create_image_montage('inputs/mildew_dataset/cherry-leaves/validation')
 
 def show_average_images(version):
     avg_powdery_mildew = plt.imread(f"outputs/{version}/avg_var_powdery_mildew.png")
     avg_healthy = plt.imread(f"outputs/{version}/avg_var_healthy.png")
 
-    st.warning(
-        "The average and variability images show XXXXX, "
-        "but a slight variation in color pigments is observed for both labels."
+    st.success(
+        "The average and variability images indicate the color and shape difference between two labels, "
+        "and the healthy class seems less variable in shapes."
     )
     st.image(avg_powdery_mildew, caption='Powdery Mildew contained cherry leave - Average and Variability')
     st.image(avg_healthy, caption='Healthy cherry leave - Average and Variability')
@@ -46,25 +52,24 @@ def show_average_images(version):
 def show_difference_between_average_images(version):
     diff_between_avgs = plt.imread(f"outputs/{version}/avg_diff.png")
 
-    st.warning("This study show intuitive differencesXXXXXXX.")
+    st.success("This study shows intuitive differences in shapes and slightly in pigmentations.")
     st.image(diff_between_avgs, caption='Difference between average images')
 
-def create_image_montage():
-    st.write("* To refresh the montage, click on the 'Create Montage' button")
-    my_data_dir = 'inputs/mildew_dataset/cherry-leaves'
-    labels = os.listdir(os.path.join(my_data_dir, 'validation'))
-    label_to_display = st.selectbox(label="Select label", options=labels, index=0)
+def create_image_montage(dir_path):
+    
+    labels = ['Powdery_Mildew', 'Healthy']
+    label_to_display = st.selectbox(label="Select cherry leave class", options=labels, index=0)
 
-    if st.button("Create Montage"):
-        nrows, ncols = 8, 3
-        create_and_display_image_montage(my_data_dir, label_to_display, nrows, ncols)
+    if st.button("Create/Refresh Montage"):
+        nrows, ncols = 4, 4
+        create_and_display_image_montage(dir_path, label_to_display, nrows, ncols)
+        
     st.write("---")
 
-def create_and_display_image_montage(dir_path, label_to_display, nrows, ncols, figsize=(15, 10)):
+def create_and_display_image_montage(dir_path, label_to_display, nrows, ncols, figsize=(55, 50)):
     sns.set_style("white")
-    labels = os.listdir(dir_path)
-
-    if label_to_display not in labels:
+    labels = ['Powdery_Mildew', 'Healthy']
+    if label_to_display.lower() not in [label.lower() for label in labels]:
         st.error("The selected label doesn't exist.")
         st.write(f"The existing options are: {labels}")
         return
