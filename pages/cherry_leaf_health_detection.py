@@ -3,6 +3,8 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 import pandas as pd
+import os
+import shutil
 
 # Page title and text
 def show():
@@ -20,22 +22,18 @@ def show():
         This page is to answer client's second business requirement
         to deliver an ML system that is capable of predicting whether 
         a cherry leaf is healthy or contains powdery mildew. ''')
-
-    st.write('''
-        You can download a set of infected and healthy cherry leave images for live prediction
+    
+    # Allow users to download images
+    st.markdown('''
+        You can **download** a set of infected and healthy cherry leave images for **live prediction**
         from [here](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves).
         ''')
 
     st.write("---")
     
-    # Allow users to download images
-    LIVE_IMG_DIR = 'https://www.kaggle.com/datasets/codeinstitute/cherry-leaves'
-    with open(LIVE_IMG_DIR, 'rb') as f:
-        st.download_button('Download Zip', f, file_name='cherry-leaves.zip')
-        
     #Upload files
-    uploaded_images = st.file_uploader('Upload cherry leaf samples. You may select more than one.',
-                                      type='jpg', accept_multiple_files=True)
+    uploaded_images = st.file_uploader('Upload cherry leaf samples for health detection. Multiple images are allowed.',
+                                        type='jpg', accept_multiple_files=True)
 
     if uploaded_images:
         df_report = pd.DataFrame([])
@@ -51,7 +49,7 @@ def show():
             pred_prob, pred_class = load_model_and_predict(resized_img, version=version)
             plot_classification_probabilities(pred_prob, pred_class)
 
-            pred_prob_percentage = f"{pred_prob * 100 :.2f}%"  # Convert probability to percentage
+            pred_prob_percentage = f"{pred_prob}%"  # Convert probability to percentage
             df_report = df_report.append({"Name": image.name, "Result": pred_class, "Accuracy %": pred_prob_percentage},
                                         ignore_index=True)
 

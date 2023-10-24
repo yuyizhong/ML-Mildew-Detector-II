@@ -35,17 +35,19 @@ def load_model_and_predict(my_image, version):
 
     target_map = {v: k for k, v in {'healthy': 0, 'powdery_mildew': 1}.items()}
     pred_class = target_map[pred_prob > 0.97]
+    prob = (pred_prob * 100).round(2)
+    
     if pred_class == target_map[0]:
-        pred_prob = 1 - pred_prob
+       prob = 100 - prob
 
     st.write(
-        f"The predictive analysis indicates the sample leave is "
-        f"**{pred_class.lower()}**.")
+        f"The predictive analysis indicates the sample leave **{prob}%** "
+        f"is **{pred_class.lower()}**")
 
-    return pred_prob, pred_class
+    return prob, pred_class
 
-#function was taken from CI walk through project01
-def plot_classification_probabilities(pred_prob, pred_class):
+#The below function is modified from CI walk through project
+def plot_classification_probabilities(prob, pred_class):
     """
     Plot prediction probability results
     """
@@ -55,17 +57,17 @@ def plot_classification_probabilities(pred_prob, pred_class):
         index={'healthy': 0, 'powdery_mildew': 1}.keys(),
         columns=['Probability']
     )
-    prob_per_class.loc[pred_class] = pred_prob
+    prob_per_class.loc[pred_class] = prob
     for x in prob_per_class.index.to_list():
         if x not in pred_class:
-            prob_per_class.loc[x] = 1 - pred_prob
-    prob_per_class = prob_per_class.round(3)
-    prob_per_class['Diagnostic'] = prob_per_class.index
+            prob_per_class.loc[x] = (1 - prob).round(2)
+    prob_per_class = prob_per_class
+    prob_per_class['Detection Result'] = prob_per_class.index
+    
+    # Define colors for the Pie Chart
+    colors = {'healthy': 'green', 'powdery_mildew': 'blue'}
 
-    fig = px.bar(
-        prob_per_class,
-        x='Diagnostic',
-        y=prob_per_class['Probability'],
-        range_y=[0, 1],
-        width=600, height=300, template='seaborn')
-    st.plotly_chart(fig)
+    
+    fig = px.pie(prob_per_class, names='Detection Result', values='Probability', color='Detection Result',
+                 color_discrete_map=colors)
+    st.plotly_chart(fig) 
