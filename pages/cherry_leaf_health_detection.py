@@ -48,7 +48,7 @@ def show():
             resized_img = resize_input_image(img=img_pil, version=version)
             pred_prob, pred_class = load_model_and_predict(resized_img, version=version)
             plot_classification_probabilities(pred_prob, pred_class)
-
+            pred_prob = pred_prob.round(3)*100
             pred_prob_percentage = f"{pred_prob}%"  # Convert probability to percentage
             df_report = df_report.append({"Name": image.name, "Result": pred_class, "Accuracy %": pred_prob_percentage},
                                         ignore_index=True)
