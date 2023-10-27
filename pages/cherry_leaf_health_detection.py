@@ -7,22 +7,23 @@ import os
 import shutil
 
 # Page title and text
+
+
 def show():
     st.title("Cherry Leaf Powdery_mildew Detection")
-    
+
     from utlis.data_process import download_df_as_csv
     from utlis.mildew_detective import (
-                                        load_model_and_predict,
-                                        resize_input_image,
-                                        plot_classification_probabilities
-                                        )
+        load_model_and_predict,
+        resize_input_image,
+        plot_classification_probabilities
+    )
 
-   
     st.success('''
         This page is to answer client's second business requirement
         to deliver an ML system that is capable of predicting whether 
         a cherry leaf is healthy or contains powdery mildew. ''')
-    
+
     # Allow users to download images
     st.markdown('''
         You can **download** a set of infected and healthy cherry leave images for **live prediction**
@@ -30,10 +31,10 @@ def show():
         ''')
 
     st.write("---")
-    
-    #Upload files
+
+    # Upload files
     uploaded_images = st.file_uploader('Upload cherry leaf samples for health detection. Multiple images are allowed.',
-                                        type='jpg', accept_multiple_files=True)
+                                       type='jpg', accept_multiple_files=True)
 
     if uploaded_images:
         df_report = pd.DataFrame([])
@@ -42,16 +43,19 @@ def show():
             img_pil = Image.open(image)
             st.info(f"Cherry Leaf Sample: **{image.name}**")
             img_array = np.array(img_pil)
-            st.image(img_pil, caption=f"Image Size: {img_array.shape[1]}px width x {img_array.shape[0]}px height")
+            st.image(
+                img_pil, caption=f"Image Size: {img_array.shape[1]}px width x {img_array.shape[0]}px height")
 
             version = 'v1-mildew'
             resized_img = resize_input_image(img=img_pil, version=version)
-            pred_prob, pred_class = load_model_and_predict(resized_img, version=version)
+            pred_prob, pred_class = load_model_and_predict(
+                resized_img, version=version)
             plot_classification_probabilities(pred_prob, pred_class)
             pred_prob = pred_prob.round(3)*100
-            pred_prob_percentage = f"{pred_prob}%"  # Convert probability to percentage
+            # Convert probability to percentage
+            pred_prob_percentage = f"{pred_prob}%"
             df_report = df_report.append({"Name": image.name, "Result": pred_class, "Accuracy %": pred_prob_percentage},
-                                        ignore_index=True)
+                                         ignore_index=True)
 
         if not df_report.empty:
             # Define custom CSS for the table
