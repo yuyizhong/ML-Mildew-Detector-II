@@ -30,6 +30,6 @@ def show():
         -Infected leaves can appear in curling, twisting, or other abnormal leaf shapes. 
         Healthy cherry leaves typically have a more uniform and symmetrical appearance.
     
-    * The average images of both classes show very different shapes, which could prove that infected 
+    * The average images of both classes show difference in shapes, which could be a proof of that infected 
     cherry leaves may exhibit a signs of distortion or malformation.  
     ''')

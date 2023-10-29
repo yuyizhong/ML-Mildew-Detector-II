@@ -7,10 +7,10 @@ def show():
 
     st.info('''
     __General info__
-    * Powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop from Farm & Foods is facing a challenge where their cherry plantations have been presenting powdery mildew.
+    * Powdery mildew, a fungal disease that affects many plant species. Our client Farm & Foods is facing a challenge where their cherry plantations have been presenting powdery mildew.
     * The manual verification if a given cherry tree containing powdery mildew takes 30 minutes per employee in each tree.
-    * The company has thousands of cherry trees, located on multiple farms across the country. As a result, this manual process is not time efficient.
-    * To solve this problem, the ML system is developed to detect instantly, using a leaf tree image, if a cherry leave is healthy or has powdery mildew. 
+    * The company has thousands of cherry trees, located on multiple farms across the country. As a result, manual process is not efficient and won't satisfy the business needs.
+    * To solve this problem, ML system is developed to detect instantly, using a leaf tree image, if a cherry leave is healthy or has powdery mildew. 
    ''')
 
     st.success('''
@@ -21,7 +21,7 @@ def show():
 
     st.markdown('__Further information can be found on the [projects **README.md** file](https://github.com/yuyizhong/ML-Mildew-Detector-/blob/main/README.md)__')
 
-    st.error('''
+    st.warning('''
     __Business requirements__
     
     -The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
