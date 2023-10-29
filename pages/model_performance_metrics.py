@@ -45,4 +45,13 @@ def show():
     st.write('<style>div.row-widget.stImage {height: 400px;}</style>', unsafe_allow_html=True)
     st.write("---")
     
+    st.markdown('### Confusion Matrix and Classification Report on Test Dataset')
     
+    st.success('The confusion matrix from model evaluation on the test data.')
+    IMAGE_PATH ="outputs/{version}"
+    cm_test = plt.imread(f"outputs/{version}/confusion_matrix_test.png")
+    st.image(cm_test, caption='Confusion matrix - test data', use_column_width=True)
+    
+    st.success('The classification reports from model evaluation on test data.')
+    cr_test = pd.read_csv((f'outputs/{version}/classification_report_test.csv'))
+    st.table(cr_test)
