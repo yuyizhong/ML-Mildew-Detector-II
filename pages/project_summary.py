@@ -26,5 +26,5 @@ def show():
     
     -The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
     
-    -The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
+    -The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew with an agreed accuracy > **97%**.
     ''')
