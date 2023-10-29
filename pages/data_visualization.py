@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 from matplotlib.image import imread
 import itertools
 import random
+from PIL import Image
 
 # Page title and text
 
@@ -97,11 +98,19 @@ def create_and_display_image_montage(dir_path, label_to_display, nrows, ncols, f
     plot_idx = list(itertools.product(range(nrows), range(ncols)))
 
     fig, axes = plt.subplots(nrows=nrows, ncols=ncols, figsize=figsize)
+    
+    # Set smaller image size
+    new_image_size = (80, 80)
 
     for x in range(nrows * ncols):
         img_path = os.path.join(dir_path, label_to_display, img_idx[x])
         img = imread(img_path)
-        img_shape = img.shape
+        
+        # Resize the image to 50x50
+        img = Image.fromarray(img)
+        img = img.resize(new_image_size)
+
+        img_shape = img.size
 
         axes[plot_idx[x][0], plot_idx[x][1]].imshow(img)
         axes[plot_idx[x][0], plot_idx[x][1]].set_title(
