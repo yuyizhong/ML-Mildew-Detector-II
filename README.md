@@ -211,4 +211,4 @@ __Steamlit was used to build the interface to deliver the analysis results and M
 
 - [Streamlit documentation](https://docs.streamlit.io/): For getting the web app up and running.
 
-- This project was also inspired by Code Institute Walkthrough project 01 
+- This project was also inspired by Code Institute Walkthrough project Malaria Detector 
