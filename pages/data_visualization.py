@@ -42,6 +42,7 @@ def show():
 
 
 def show_average_images(version):
+    
     avg_powdery_mildew = plt.imread(
         f"outputs/{version}/avg_var_powdery_mildew.png")
     avg_healthy = plt.imread(f"outputs/{version}/avg_var_healthy.png")
@@ -57,6 +58,7 @@ def show_average_images(version):
 
 
 def show_difference_between_average_images(version):
+    
     diff_between_avgs = plt.imread(f"outputs/{version}/avg_diff.png")
 
     st.success(
@@ -79,6 +81,7 @@ def create_image_montage(dir_path):
 
 
 def create_and_display_image_montage(dir_path, label_to_display, nrows, ncols, figsize=(55, 50)):
+    
     sns.set_style("white")
     labels = ['powdery_mildew', 'healthy']
     if label_to_display.lower() not in [label.lower() for label in labels]:
@@ -106,7 +109,7 @@ def create_and_display_image_montage(dir_path, label_to_display, nrows, ncols, f
         img_path = os.path.join(dir_path, label_to_display, img_idx[x])
         img = imread(img_path)
         
-        # Resize the image to 50x50
+        # Resize the image to 80x80
         img = Image.fromarray(img)
         img = img.resize(new_image_size)
 
