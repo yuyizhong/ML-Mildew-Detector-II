@@ -40,8 +40,10 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 
 ## Hypothesis and how to validate?
+
 __Hypothesis__: powdery mildew infected cherry leaves have visible differences 
     from healthy ones.
+
 __How to validate__: Conduct Average Image, Variable Images and Difference 
     between Averages Images Study of both healthy and powdery-mildew classes.
 
@@ -117,9 +119,9 @@ __How to validate__: Conduct Average Image, Variable Images and Difference
 Addressing Business Requirement 1: Differentiating healthy cherry leaves from powdery mildew.
 Components:
 
-    - Show average and variability images for each class (healthy and powdery mildew).
-    - Display the differences between average healthy and average powdery mildew cherry leaves.
-    - Create an image montage for each class.
+   - Show average and variability images for each class (healthy and powdery mildew).
+   - Display the differences between average healthy and average powdery mildew cherry leaves.
+   - Create an image montage for each class.
 
 Visual representations of the average images, differences, and image montages for better understanding.
 
@@ -128,22 +130,22 @@ Visual representations of the average images, differences, and image montages fo
 Addressing Business Requirement 2: Predicting if a cherry leaf is healthy or contains powdery mildew.
 Components:
 
-    - Link to download a set of cherry leaf images for live prediction (from the provided dataset).
-    - User Interface with a file uploader widget for uploading multiple cherry leaf images.
-    - Display of uploaded images and prediction statements (healthy or powdery mildew) with associated probabilities.
-    - A table showing the image name and prediction results.
-    - Download link to download the prediction results.
+   - Link to download a set of cherry leaf images for live prediction (from the provided dataset).
+   - User Interface with a file uploader widget for uploading multiple cherry leaf images.
+   - Display of uploaded images and prediction statements (healthy or powdery mildew) with associated probabilities.
+   - A table showing the image name and prediction results.
+   - Download link to download the prediction results.
 
 ### Page 4: Project Hypothesis and Validation
-    - Provides information on project hypotheses and their validation.
-    - Separate blocks for each hypothesis with conclusions and validation details.
+   - Provides information on project hypotheses and their validation.
+   - Separate blocks for each hypothesis with conclusions and validation details.
 
 ### Page 5: Model Performance Metrics
-    - Display of machine learning model performance metrics.
-    - Label frequencies for the train, validation, and test datasets.
-    - Model history showing accuracy and loss curves during training.
-    - Model evaluation results on test data
-    - Confusion Matrix and Classification analysis on test data
+   - Display of machine learning model performance metrics.
+   - Label frequencies for the train, validation, and test datasets.
+   - Model history showing accuracy and loss curves during training.
+   - Model evaluation results on test data
+   - Confusion Matrix and Classification analysis on test data
 
 
 ## Deployment
