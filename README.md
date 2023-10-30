@@ -132,7 +132,7 @@ Components:
     - User Interface with a file uploader widget for uploading multiple cherry leaf images.
     - Display of uploaded images and prediction statements (healthy or powdery mildew) with associated probabilities.
     - A table showing the image name and prediction results.
-    - Download button to download the prediction results.
+    - Download link to download the prediction results.
 
 ### Page 4: Project Hypothesis and Validation
     - Provides information on project hypotheses and their validation.
@@ -143,7 +143,7 @@ Components:
     - Label frequencies for the train, validation, and test datasets.
     - Model history showing accuracy and loss curves during training.
     - Model evaluation results on test data
-    -Confusion Matrix and Classification analysis on test data
+    - Confusion Matrix and Classification analysis on test data
 
 
 ## Deployment
