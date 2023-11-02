@@ -1,4 +1,3 @@
-
 from PIL import Image
 import streamlit as st
 import numpy as np
@@ -70,7 +69,8 @@ def plot_classification_probabilities(pred_prob, pred_class):
     # Define colors for the Pie Chart
     colors = {'healthy': 'green', 'powdery_mildew': 'blue'}
 
-    fig = px.pie(prob_per_class, names='Detection Result', values='Probability',
+    fig = px.pie(prob_per_class, names='Detection Result',
+                 values='Probability',
                  color='Detection Result',
                  color_discrete_map=colors)
     st.plotly_chart(fig)

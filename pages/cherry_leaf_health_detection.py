@@ -19,20 +19,25 @@ def show():
 
     st.success('''
         This page is to answer client's second business requirement
-        to deliver an ML system that is capable of predicting whether 
+        to deliver an ML system that is capable of predicting whether
         a cherry leaf is healthy or contains powdery mildew. ''')
 
     # Allow users to download images
-    st.markdown('''
-        You can **download** a set of infected and healthy cherry leave images for **live prediction**
-        from [here](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves).
-        ''')
+    st.markdown(
+        'You can **download** a set of infected and healthy cherry leave'
+        'images for **live prediction** from [here]'
+        '(https://www.kaggle.com/datasets/codeinstitute/cherry-leaves).'
+        )
 
     st.write("---")
 
     # Upload files
-    uploaded_images = st.file_uploader('Upload cherry leaf samples for health detection. Multiple images are allowed.',
-                                       type='jpg', accept_multiple_files=True)
+    uploaded_images = st.file_uploader(
+        'Upload cherry leaf samples for health detection.'
+        'Multiple images are allowed.',
+        type='jpg',
+        accept_multiple_files=True
+    )
 
     if uploaded_images:
         df_report = pd.DataFrame([])
@@ -42,7 +47,10 @@ def show():
             st.info(f"Cherry Leaf Sample: **{image.name}**")
             img_array = np.array(img_pil)
             st.image(
-                img_pil, caption=f"Image Size: {img_array.shape[1]}px width x {img_array.shape[0]}px height")
+                img_pil,
+                caption=f"Image Size: {img_array.shape[1]}px width"
+                f"x {img_array.shape[0]}px height"
+            )
 
             version = 'v1-mildew'
             resized_img = resize_input_image(img=img_pil, version=version)
@@ -52,7 +60,9 @@ def show():
             pred_prob = pred_prob.round(3)*100
             # Convert probability to percentage
             pred_prob_percentage = f"{pred_prob}%"
-            df_report = df_report.append({"Name": image.name, "Result": pred_class, "Accuracy %": pred_prob_percentage},
+            df_report = df_report.append({"Name": image.name,
+                                          "Result": pred_class,
+                                          "Accuracy %": pred_prob_percentage},
                                          ignore_index=True)
 
         if not df_report.empty:
