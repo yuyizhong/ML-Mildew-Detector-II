@@ -162,8 +162,119 @@ Components:
 
 ## Testing
 ### Manual Testing
+*Project Summary*
+
+Project information for user to further understand the APP background
+
+Steps:
+
+1. Navigate to the APP  
+2. You will see the tile 'Cherry Leave Mildew Detector' and a drop down window 
+3. **Project Summary** is preselected 
+
+
+Page contains:
+   - General info
+   - Project Dataset
+   - Link to README.md
+   - Business Requirements
+
+![Summary Page](assets/img/dashboard/page_summary.PNG)
+<hr>
+
+*Cherry Leaf Visualization*
+
+Contains Visualization options for users to explore
+
+Steps:
+
+1. Navigate to the APP  
+2. under the APP 'Cherry Leave Mildew Detector' and click on the drop down window
+3. Select **Cherry Leaf Visualization** 
+
+
+Page contains:
+   - Page info and Select options
+   ![Visualization Page](assets/img/dashboard/page_visualization.PNG)
+
+   - Options of visualization:
+    * Average and variability image by class
+   ![Visualization Page](assets/img/dashboard/page_visualization_option1.PNG)
+    * Differences of average infected and healthy leaves
+    ![Visualization Page](assets/img/dashboard/page_visualization_option2.PNG)
+    * Image Montage by Class:
+      - Powdery Mildew
+    ![Visualization Page](assets/img/dashboard/page_visualization_montage1.PNG)
+      - Healthy
+    ![Visualization Page](assets/img/dashboard/page_visualization_montage2.PNG)
+<hr>
+
+*Cherry Leaf Powdery_mildew Detection*
+
+Page for user to live predict and save the prediction result
+
+Steps:
+
+1. Navigate to the APP  
+2. under the APP 'Cherry Leave Mildew Detector' and click on the drop down window
+3. Select **Cherry Leaf Health Detection** 
+Page contains:
+   - Page info, link for live data and window to upload image files
+   ![Detection Page](assets/img/dashboard/page_detection.PNG)
+4. Click on 'here' to download the live dataset and save to local computer
+5. Click on 'Browse files' to select the image for detection and click on 'Open'
+6. Image is displayed with the detection result and prediction rate underneath
+ ![Detection Result](assets/img/dashboard/page_detection_result.PNG)
+7. Detection Report is displayed as table and can be download by click on 'Download Report'
+ ![Detection Result](assets/img/dashboard/page_detection_download.PNG)
+8. If multiple images need to be detected, please repeat step 5 and the new detection result will be added to the table rows.
+ ![Detection Result](assets/img/dashboard/page_detection_apend_table.PNG)
+
+<hr>
+
+*Project Hypothesis and Validation*
+
+Project hypothesis and how to validate it
+
+Steps:
+
+1. Navigate to the APP  
+2. Under the tile 'Cherry Leave Mildew Detector' and a drop down window 
+3. Click on **Project Hypothesis and Validation**
+
+
+Page contains:
+   - Hypothesis info
+   - How to validate
+![Hypothesis and Validation Page](assets/img/dashboard/page_hypo_validation.PNG)
+<hr>
+
+*Model Performance Metrics*
+
+Contains Model Evaluation results for users to understand the model performance
+
+Steps:
+
+1. Navigate to the APP  
+2. under the APP 'Cherry Leave Mildew Detector' and click on the drop down window
+3. Select **Model Performance Metrics** 
+
+Page contains:
+   - Labels distribution on 3 datasets
+   ![Metrics Page](assets/img/dashboard/page_metrics1.PNG)
+   - Model Learning history/learning curves
+   ![Metrics Page](assets/img/dashboard/page_metrics2.PNG)
+   - Generalized Performance on Test Set
+   ![Metrics Page](assets/img/dashboard/page_metrics3.PNG)
+   - Confusion Matrix and Classification Report on Test Dataset
+   ![Metrics Page](assets/img/dashboard/page_metrics4.PNG)  
+<hr>
 
 ### Validation Testing
+All python files were run through the CI [Pep8](https://pep8ci.herokuapp.com/) validator to ensure all code was pep8 compliant. Some errors were shown due to white trailing spaces and lines too long, empty lines expected. All of these errors were resolved and code passed through validators with the exception of the settings.py file.
+
+
+![PEP8](assets/img/testing/pep8.PNG)
 
 
 ## Deployment
