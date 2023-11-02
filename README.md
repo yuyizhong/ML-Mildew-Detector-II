@@ -7,7 +7,7 @@ An Machine learning Image classifier project to detect a particular cherry leave
 2. [Business Requirements](#business-requirements)
 3. [Hypothesis and Validation](#hypothesis-and-validation)
 4. [The rationale to map the business requirements to the Data Visualizations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualizations-and-ml-tasks)
-   - [Agile Planning](#agile_planning)
+   - [Agile Planning](#agile-planning)
    - [Epics](#epics)
    - [User Stories](#user-stories)
       1. [Data Collection and Preparation](#data-collection-and-preparation)
@@ -21,9 +21,9 @@ An Machine learning Image classifier project to detect a particular cherry leave
    - [Page 3: Cherry leave health detection](#page-4-cherry-leave-health-detection)
    - [Page 4: Hypothesis and Validation](#page-5-hypothesis-and-validation)
    - [Page 5: Model Performance Metrics](#page-6-model-performance-metrics)
-7. [Testing)](#testing)
-   - [Manual Testing](#manual_testing) 
-   - [Pep8 Validation Testing](#pep8_validation_testing)
+7. [Testing](#testing)
+   - [Manual Testing](#manual-testing) 
+   - [Validation Testing](#pep8-validation-testing)
 8. [Deployment](#deployment)
 9. [Main Data Analysis & Machine Learning Libraries](#main-data-analysis--machine-learning-libraries)
 10. [Run locally](#run-locally)
@@ -163,7 +163,7 @@ Components:
 ## Testing
 ### Manual Testing
 
-### Pep8 Validation Testing
+### Validation Testing
 
 
 ## Deployment
