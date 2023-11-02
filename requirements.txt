@@ -12,4 +12,3 @@ keras==2.6.0
 protobuf==3.20
 altair<5
 
-backports.zoneinfo==0.2.1; python_version < "3.9" 
