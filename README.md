@@ -7,6 +7,7 @@ An Machine learning Image classifier project to detect a particular cherry leave
 2. [Business Requirements](#business-requirements)
 3. [Hypothesis and Validation](#hypothesis-and-validation)
 4. [The rationale to map the business requirements to the Data Visualizations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualizations-and-ml-tasks)
+   - [Agile Planning](#agile_planning)
    - [Epics](#epics)
    - [User Stories](#user-stories)
       1. [Data Collection and Preparation](#data-collection-and-preparation)
@@ -20,10 +21,13 @@ An Machine learning Image classifier project to detect a particular cherry leave
    - [Page 3: Cherry leave health detection](#page-4-cherry-leave-health-detection)
    - [Page 4: Hypothesis and Validation](#page-5-hypothesis-and-validation)
    - [Page 5: Model Performance Metrics](#page-6-model-performance-metrics)
-7. [Deployment](#deployment)
-8. [Main Data Analysis & Machine Learning Libraries](#main-data-analysis--machine-learning-libraries)
-9. [Run locally](#run-locally)
-10. [Credits](#credits)
+7. [Testing)](#testing)
+   - [Manual Testing](#manual_testing) 
+   - [Pep8 Validation Testing](#pep8_validation_testing)
+8. [Deployment](#deployment)
+9. [Main Data Analysis & Machine Learning Libraries](#main-data-analysis--machine-learning-libraries)
+10. [Run locally](#run-locally)
+11. [Credits](#credits)
 
 ## Dataset Content
 * The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
@@ -48,13 +52,21 @@ __How to validate__: Conduct Average Image, Variable Images and Difference
     between Averages Images Study of both healthy and powdery-mildew classes.
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
+### Agile Planning
+
+This project was developed through applying agile methodologies by delivering small features in incremental sprints.
+
+All projects were assigned to epics, which were broken into small tasks and prioritized as must have, should have, could have. "Must have" stories were completed first before "should haves", and the last "could haves". To ensure all core requirements completed first gives a complete product, with the nice to have features being added if the time frame allows.
+
+The ML Mildew Detector User Story was created using github projects and can be located [here](https://github.com/users/yuyizhong/projects/5/views/2) and can be viewed for more information on the project cards. All stories except documentation tasks have a full set of acceptance criteria to mark the story is completed.
+
 ### Epics:
 
 - __Data collection and preparation__
 - __Data visualization__
 - __Model training, optimization and evaluation__
 - __Dashboard planning, designing, and development and deployment__
-- __API Development and deployment__
+- __APP Development and deployment__
 
 ### User stories:
 
@@ -146,6 +158,12 @@ Components:
    - Model history showing accuracy and loss curves during training.
    - Model evaluation results on test data
    - Confusion Matrix and Classification analysis on test data
+
+
+## Testing
+### Manual Testing
+
+### Pep8 Validation Testing
 
 
 ## Deployment
