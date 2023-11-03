@@ -72,8 +72,9 @@ def show():
         '''
         Both confusion matrix and classification analysis
         showed a higher prediction rate of 100% in powdery mildew class
-        and lower accuracy rate in healthy class. Which is
-        preferable as the model setting and training
+        and slightly lower accuracy rate in healthy class. Which is
+        preferable as it reduces the risk of overlooking infected leaves
+        which may compromise the corp product quality.  
         '''
     )
 
