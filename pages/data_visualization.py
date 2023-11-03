@@ -43,7 +43,7 @@ def show():
         show_difference_between_average_images(version)
 
     if selected_option == "Image Montage by Class":
-        create_image_montage('inputs/mildew_dataset/cherry-leaves/validation')
+        create_image_montage('assets/montage_data/sample_img')
 
 
 def show_average_images(version):
