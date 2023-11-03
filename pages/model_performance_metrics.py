@@ -12,7 +12,7 @@ def show():
     st.title("Model Performance Metrics")
     version = 'v1-mildew'
 
-    st.write("### Labels distribution on Train, Validation and Test Set ")
+    st.write("### Labels balance distribution on datasets ")
 
     labels_distribution = plt.imread(
         f"outputs/{version}/labels_distribution.png"
@@ -24,11 +24,11 @@ def show():
     st.write("---")
     st.write("### Model Learning history")
     st.info(f'''
-        -The model was trained over 50 epochs, achieving
+        - The model was trained over 50 epochs, achieving
         the below loss and accuracy learning curve on training
         and validation set respectively.
 
-        -A nice learning trendy progress indicates a normal fit model
+        - A nice learning trendy progress indicates a normal fit model
         staring with high loss and low accuracy
         (train_loss: 0.3076 - train_accuracy: 0.8509,
         val_loss: 0.1622 - val_accuracy: 0.9714)
@@ -70,11 +70,12 @@ def show():
     )
     st.info(
         '''
-        Both confusion matrix and classification analysis
-        showed a higher prediction rate of 100% in powdery mildew class
-        and slightly lower accuracy rate in healthy class. Which is
-        preferable as it reduces the risk of overlooking infected leaves
-        which may compromise the corp product quality.  
+        - Both confusion matrix and classification analysis
+        showed a higher prediction rate of 100% in powdery mildew
+        class and slightly lower accuracy rate in healthy class.
+
+        - It is preferable as it reduces the risk of overlooking
+        infected leaves which may compromise the corp product quality.
         '''
     )
 
