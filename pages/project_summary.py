@@ -35,7 +35,7 @@ def show():
         '__Further information can be found on the '
         '[project\'s **README.md** file]'
         '(https://github.com/yuyizhong/'
-        'ML-Mildew-Detector-/blob/main/README.md)__'
+        'ML-Mildew-Detector-II/blob/main/README.md)__'
     )
 
     st.warning('''
