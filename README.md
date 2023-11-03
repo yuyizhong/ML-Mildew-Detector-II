@@ -22,7 +22,7 @@ An Machine learning Image classifier project to detect a particular cherry leave
    - [Page 4: Hypothesis and Validation](#page-5-hypothesis-and-validation)
    - [Page 5: Model Performance Metrics](#page-6-model-performance-metrics)
 7. [Testing](#testing)
-   - [Manual Testing](#manual-testing) 
+   - [Manual Testing](#manual-testing) ss
    - [Validation Testing](#pep8-validation-testing)
 8. [Deployment](#deployment)
 9. [Main Data Analysis & Machine Learning Libraries](#main-data-analysis--machine-learning-libraries)
@@ -30,8 +30,9 @@ An Machine learning Image classifier project to detect a particular cherry leave
 11. [Credits](#credits)
 
 ## Dataset Content
-* The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
-* The dataset contains +4 thousand images taken from the client's crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
+* The dataset contains +4 thousand images taken from the client's crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a fungal disease that affects many plant species. 
+* The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
+* The client provided the data under an NDA (non-disclosure agreement), therefore the data should only be shared with professionals that are officially involved in the project.
 
 ## Business Requirements
 The cherry plantation crop from Farmy & Foods is facing a challenge where their cherry plantations have been presenting powdery mildew. Currently, the process is manual verification if a given cherry tree contains powdery mildew. An employee spends around 30 minutes in each tree, taking a few samples of tree leaves and verifying visually if the leaf tree is healthy or has powdery mildew. If there is powdery mildew, the employee applies a specific compound to kill the fungus. The time spent applying this compound is 1 minute.  The company has thousands of cherry trees, located on multiple farms across the country. As a result, this manual process is not scalable due to the time spent in the manual process inspection.
@@ -202,13 +203,17 @@ Contains Visualization options for users to explore
    ![Visualization Page](assets/img/dashboard/page_visualization.PNG)
 
    - Options of visualization:
+
     * Average and variability image by class
    ![Visualization Page](assets/img/dashboard/page_visualization_option1.PNG)
+
     * Differences of average infected and healthy leaves
     ![Visualization Page](assets/img/dashboard/page_visualization_option2.PNG)
+
     * Image Montage by Class:
       - Powdery Mildew
     ![Visualization Page](assets/img/dashboard/page_visualization_montage1.PNG)
+
       - Healthy
     ![Visualization Page](assets/img/dashboard/page_visualization_montage2.PNG)
 <hr>
@@ -221,7 +226,8 @@ Page for user to live predict and save the prediction result
 
 1. Navigate to the APP  
 2. under the APP 'Cherry Leave Mildew Detector' and click on the drop down window
-3. Select **Cherry Leaf Health Detection** 
+3. Select **Cherry Leaf Health Detection**
+
 Page contains:
    - Page info, link for live data and window to upload image files
    ![Detection Page](assets/img/dashboard/page_detection.PNG)
@@ -341,8 +347,6 @@ __Main Machine Learning libraries used:__
 __Steamlit was used to build the interface to deliver the analysis results and ML model to users__
 
 ## Credits 
-
-- [Churnometer repo by Code Institute](https://github.com/Code-Institute-Solutions/churnometer#readme): For the Readme template/structure.
 
 - [Streamlit documentation](https://docs.streamlit.io/): For getting the web app up and running.
 
