@@ -61,6 +61,7 @@ All projects were assigned to epics, which were broken into small tasks and prio
 The ML Mildew Detector User Story was created using github projects and can be located [here](https://github.com/users/yuyizhong/projects/5/views/2) and can be viewed for more information on the project cards. All stories except documentation tasks have a full set of acceptance criteria to mark the story is completed.
 
 ![User Story Project 1](assets/img/agile_planning/agile_project.PNG)
+
 ![User Story Project 1](assets/img/agile_planning/agile_project_example.PNG)
 
 
@@ -126,9 +127,9 @@ The ML Mildew Detector User Story was created using github projects and can be l
 
 ### Page 1: Project Summary
 
-    - Quick project summary providing background information about the project and its importance.
-    - General information about the problem and the available dataset.
-    - Business requirements
+   - Quick project summary providing background information about the project and its importance.
+   - General information about the problem and the available dataset.
+   - Business requirements
 
 ### Page 2: Cherry Leaf Visualizer
 
