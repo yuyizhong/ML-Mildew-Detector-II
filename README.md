@@ -60,13 +60,17 @@ All projects were assigned to epics, which were broken into small tasks and prio
 
 The ML Mildew Detector User Story was created using github projects and can be located [here](https://github.com/users/yuyizhong/projects/5/views/2) and can be viewed for more information on the project cards. All stories except documentation tasks have a full set of acceptance criteria to mark the story is completed.
 
+![User Story Project 1](assets/img/agile_planning/agile_project.PNG)
+![User Story Project 1](assets/img/agile_planning/agile_project_example.PNG)
+
+
 ### Epics:
 
 - __Data collection and preparation__
 - __Data visualization__
 - __Model training, optimization and evaluation__
-- __Dashboard planning, designing, and development and deployment__
-- __APP Development and deployment__
+- __Dashboard planning, designing, and development__
+- __APP deployment and Release__
 
 ### User stories:
 
@@ -153,7 +157,6 @@ Components:
    - Separate blocks for each hypothesis with conclusions and validation details.
 
 ### Page 5: Model Performance Metrics
-   - Display of machine learning model performance metrics.
    - Label frequencies for the train, validation, and test datasets.
    - Model history showing accuracy and loss curves during training.
    - Model evaluation results on test data
@@ -162,18 +165,18 @@ Components:
 
 ## Testing
 ### Manual Testing
-*Project Summary*
+#### *Project Summary*
 
 Project information for user to further understand the APP background
 
-Steps:
+**Steps:**
 
 1. Navigate to the APP  
 2. You will see the tile 'Cherry Leave Mildew Detector' and a drop down window 
 3. **Project Summary** is preselected 
 
 
-Page contains:
+**Page contains:**
    - General info
    - Project Dataset
    - Link to README.md
@@ -182,18 +185,18 @@ Page contains:
 ![Summary Page](assets/img/dashboard/page_summary.PNG)
 <hr>
 
-*Cherry Leaf Visualization*
+#### *Cherry Leaf Visualization*
 
 Contains Visualization options for users to explore
 
-Steps:
+**Steps:**
 
 1. Navigate to the APP  
 2. under the APP 'Cherry Leave Mildew Detector' and click on the drop down window
 3. Select **Cherry Leaf Visualization** 
 
 
-Page contains:
+**Page contains:**
    - Page info and Select options
    ![Visualization Page](assets/img/dashboard/page_visualization.PNG)
 
@@ -209,11 +212,11 @@ Page contains:
     ![Visualization Page](assets/img/dashboard/page_visualization_montage2.PNG)
 <hr>
 
-*Cherry Leaf Powdery_mildew Detection*
+#### *Cherry Leaf Powdery_mildew Detection*
 
 Page for user to live predict and save the prediction result
 
-Steps:
+**Steps:**
 
 1. Navigate to the APP  
 2. under the APP 'Cherry Leave Mildew Detector' and click on the drop down window
@@ -232,34 +235,34 @@ Page contains:
 
 <hr>
 
-*Project Hypothesis and Validation*
+#### *Project Hypothesis and Validation*
 
 Project hypothesis and how to validate it
 
-Steps:
+**Steps:**
 
 1. Navigate to the APP  
 2. Under the tile 'Cherry Leave Mildew Detector' and a drop down window 
 3. Click on **Project Hypothesis and Validation**
 
 
-Page contains:
+**Page contains:**
    - Hypothesis info
    - How to validate
 ![Hypothesis and Validation Page](assets/img/dashboard/page_hypo_validation.PNG)
 <hr>
 
-*Model Performance Metrics*
+#### *Model Performance Metrics*
 
 Contains Model Evaluation results for users to understand the model performance
 
-Steps:
+**Steps:**
 
 1. Navigate to the APP  
 2. under the APP 'Cherry Leave Mildew Detector' and click on the drop down window
 3. Select **Model Performance Metrics** 
 
-Page contains:
+**Page contains:**
    - Labels distribution on 3 datasets
    ![Metrics Page](assets/img/dashboard/page_metrics1.PNG)
    - Model Learning history/learning curves
